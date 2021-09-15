@@ -401,7 +401,7 @@ class Map
 
 
 
-    public function getLegend($classes = "", HtmlBuilder $htmlBuilder)
+    public function getLegend(HtmlBuilder $htmlBuilder, $classes = "")
     {
         $legend = new Legend($this);
         return $legend->getHtml($classes, $htmlBuilder);
