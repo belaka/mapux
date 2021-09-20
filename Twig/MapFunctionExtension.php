@@ -23,8 +23,9 @@ class MapFunctionExtension extends AbstractExtension
 
     public function renderMap(string $mapId, Map $map, string $classList = "", string $legendClassList = ""): string
     {
+        $htmlBuilder = new HtmlBuilder();
         if ($map->isReady()) {
-            $htmlBuilder = new HtmlBuilder();
+            
             $htmlBuilder
                 ->div([
                     'attributes' => [
@@ -48,11 +49,12 @@ class MapFunctionExtension extends AbstractExtension
                 ->close();
 
             if ($map->hasLegend()) {
-                $map->getLegend($legendClassList, $htmlBuilder);
+                $map->getLegend($htmlBuilder, $legendClassList);
             }
 
             $htmlBuilder->close();
         }
+        
         return $htmlBuilder;
     }
 }
