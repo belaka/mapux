@@ -52,7 +52,7 @@ class Legend
         return $legendLayers;
     }
 
-    public function getHtml($classes = "", HtmlBuilder $htmlBuilder)
+    public function getHtml(HtmlBuilder $htmlBuilder, $classes = "")
     {
         $htmlBuilder
             ->div([
