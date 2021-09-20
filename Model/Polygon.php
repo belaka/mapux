@@ -37,6 +37,11 @@ final class Polygon extends GeojsonLayer
         $this->makeJson();
         $this->setLegendType('square');
     }
+    
+    public function getSurface()
+    {
+        return 0;
+    }
 
     private function makeJson()
     {
