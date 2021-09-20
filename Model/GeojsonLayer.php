@@ -60,7 +60,7 @@ abstract class GeojsonLayer extends ShapeLayer
      */
     public function setPoints(array $points): void
     {
-        $this->points = $this->reversePoints($points);
+        $this->points = $points;  //$this->reversePoints($points); ???why do we reverse point???
     }
 
     /**
