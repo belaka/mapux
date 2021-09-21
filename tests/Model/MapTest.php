@@ -1,6 +1,6 @@
 <?php
 
-namespace MapUx\tests;
+namespace MapUx\tests\Model;
 
 use MapUx\Model\Map;
 use MapUx\Model\Marker;
