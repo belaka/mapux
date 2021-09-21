@@ -2,6 +2,7 @@
     position:relative;
     min-width: 300px;
     min-height: 400px;
+    height: 100%;
 }
 .mapux-map {
     position:relative;
