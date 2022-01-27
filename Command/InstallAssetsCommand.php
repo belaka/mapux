@@ -30,7 +30,7 @@ class InstallAssetsCommand extends Command
         $this->setDescription('map ux assets installer');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output)
+    protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $projectDirProvider = new ProjectDirProvider();
 

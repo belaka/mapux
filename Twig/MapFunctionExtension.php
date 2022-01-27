@@ -14,7 +14,7 @@ use Twig\TwigFunction;
 class MapFunctionExtension extends AbstractExtension
 {
 
-    public function getFunctions()
+    public function getFunctions(): array
     {
         return [
             new TwigFunction('render_map', [$this, 'renderMap'], ['is_safe' => ['html']]),
