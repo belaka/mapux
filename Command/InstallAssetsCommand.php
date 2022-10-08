@@ -10,8 +10,13 @@ use Symfony\Component\Console\Question\ChoiceQuestion;
 use Symfony\Component\Console\Question\Question;
 use Symfony\Component\Console\Style\SymfonyStyle;
 use Symfony\Component\Console\Question\ConfirmationQuestion;
+use Symfony\Component\Console\Attribute\AsCommand;
 
-
+#[AsCommand(
+    name: 'mapux:install',
+    description: 'map ux assets installer',
+    hidden: false
+)]
 class InstallAssetsCommand extends Command
 {
 
@@ -22,12 +27,9 @@ class InstallAssetsCommand extends Command
     const RESOURCES_JS_DIR     = '/vendor/frvaillant/mapux/Resources/assets/js';
     const APP_JS_FILE          = '/assets/app.js';
 
-    protected static $defaultName = 'mapux:install';
-
-
     protected function configure()
     {
-        $this->setDescription('map ux assets installer');
+    
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
