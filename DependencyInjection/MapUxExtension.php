@@ -16,7 +16,7 @@ use Symfony\Component\Config\FileLocator;
 
 class MapUxExtension extends Extension
 {
-    public function load(array $configs, ContainerBuilder $container)
+    public function load(array $configs, ContainerBuilder $container): void
     {
         $container
             ->setDefinition('mapux.builder', new Definition(MapBuilder::class))
