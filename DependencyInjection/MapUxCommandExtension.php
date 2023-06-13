@@ -11,7 +11,7 @@ use Symfony\Component\Config\FileLocator;
 
 class MapUxCommandExtension extends Extension
 {
-    public function load(ContainerBuilder $container)
+    public function load(ContainerBuilder $container): void
     {
         $loader = new XmlFileLoader(
             $container,
