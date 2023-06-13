@@ -120,7 +120,7 @@ class HtmlElement
     public function open() {
         $html = '<%s ';
         foreach ($this->attributes as $name => $value) {
-            $html .= sprintf('%s="%s" ', $name, htmlspecialchars($value));
+            $html .= sprintf('%s="%s" ', $name, ($value) ? htmlspecialchars($value) : '');
         }
         $html = rtrim($html);
         $html .= $this->isSingle() ? ' />' : '>';
