@@ -27,7 +27,7 @@ class InstallAssetsCommand extends Command
     const RESOURCES_JS_DIR     = '/vendor/frvaillant/mapux/Resources/assets/js';
     const APP_JS_FILE          = '/assets/app.js';
 
-    protected function configure()
+    protected function configure(): void
     {
     
     }
@@ -145,7 +145,8 @@ Encore.addAliases({
      * @param $source
      * @param $destination
      */
-    private function copyFiles($source, $destination) {
+    private function copyFiles($source, $destination): void 
+    {
         $dir = opendir($source);
         if(!file_exists($destination)) {
             mkdir($destination);
