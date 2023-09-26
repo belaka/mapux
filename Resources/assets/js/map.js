@@ -15,22 +15,13 @@ export const reqIcons = {
     "black": require('../images/black-icon.png'),
 }
 
-if ("complete" === document.readyState || "interactive" === document.readyState) {
+document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementsByClassName('mapux-map').length > 0) {
         document.getElementsByClassName('mapux-map').forEach(mapZone => {
             const mapBuilder = new MapBuilder(mapZone);
             mapBuilder.createMap()
         })
     }
-} else {
-    document.addEventListener('DOMContentLoaded', () => {
-        if (document.getElementsByClassName('mapux-map').length > 0) {
-            document.getElementsByClassName('mapux-map').forEach(mapZone => {
-                const mapBuilder = new MapBuilder(mapZone);
-                mapBuilder.createMap()
-            })
-        }
-    })
-}
+})
 
 
